@@ -28,7 +28,7 @@ Open this file with text editor, you should see something like this :
 - Layout is the keyboard layout to use, you can look up the code you want here : [[MS-LCID]: Windows Language Code Identifier (LCID) Reference](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f).
 You need to add 4 zero's at the beginning of the code. In the example, 0409 is the code for us_EN.
 - DeviceID is the Identifier of the keyboard. You should not change this unless you know what you are doing.
-- PostMessage is for debug purpose, but you should use it to say witch language you switch.
+- PostMessage is for debug purpose, but you should use it to say which language you switch.
 
 Once you have change the file, the next time you run the program, it will activate it's mechanism.
 
