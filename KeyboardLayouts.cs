@@ -21,6 +21,11 @@ class KeyboardLayout
   const int KL_NAMELENGTH = 9;
   #endregion
 
+  /// <summary>
+  /// This method is used to switch to a specific layout
+  /// </summary>
+  /// <param name="layout">The layout code to switch to</param>
+  /// <returns>True if the layout was switched, false otherwise</returns>
   public static bool SwitchToLanguage(string languageCode)
   {
     return PostMessage(HWND_BROADCAST,
@@ -30,11 +35,19 @@ class KeyboardLayout
   }
 
 
+  /// <summary>
+  /// This method is used to get the current layout name.
+  /// </summary>
+  /// <returns>The current layout as a name</returns>
   public static string GetLayoutName()
   {
     return KeyboardLayoutConverter.CodeToName(GetLayoutCode());
   }
 
+  /// <summary>
+  /// This method is used to get the current layout code.
+  /// </summary>
+  /// <returns>The current layout as a code</returns>
   public static string GetLayoutCode()
   {
     var name = new StringBuilder(KL_NAMELENGTH);

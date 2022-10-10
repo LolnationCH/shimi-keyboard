@@ -1,5 +1,10 @@
 public static class KeyboardLayoutConverter
 {
+  /// <summary>
+  /// This method is used to convert a layout code to a layout name.
+  /// </summary>
+  /// <param name="code">The code to convert</param>
+  /// <returns>The name of the layout</returns>
   public static String CodeToName(string code)
   {
     switch (code)
@@ -338,6 +343,11 @@ public static class KeyboardLayoutConverter
     }
   }
 
+  /// <summary>
+  /// Returns the code of the keyboard layout for the given keyboard layout name. If the name is not found, we return the name as the code.
+  /// </summary>
+  /// <param name="name">The name of the keyboard layout.</param>
+  /// <returns>The code of the keyboard layout.</returns>
   public static string NameToCode(string name)
   {
     switch (name)
