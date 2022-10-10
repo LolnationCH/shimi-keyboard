@@ -27,10 +27,12 @@ static class ConfigHandler
   {
     foreach (var keyboardInfo in keyboardsInfo)
     {
+      var keyboardCode = KeyboardLayout.GetLayoutCode();
       _keyboardLayoutConfigs.Add(new KeyboardLayoutConfig()
       {
-        Layout = KeyboardLayout.GetLayoutName(), // Set current layout as default
-        DeviceID = keyboardInfo.DeviceID
+        Layout = keyboardCode, // Set current layout as default
+        DeviceID = keyboardInfo.DeviceID,
+        PostMessage = $"Switching to {KeyboardLayoutConverter.CodeToName(keyboardCode)}"
       });
     }
 
